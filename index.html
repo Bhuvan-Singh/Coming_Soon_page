@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bhuvan Singh Resume</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Lato");
+		@import url('https://fonts.googleapis.com/css?family=Rubik:700');
+		@font-face {
+		  font-family: peacesans;
+		  src: url("Peace Sans Webfont.ttf") format("opentype");
+		}
+		@font-face {
+		  font-family: mosk;
+		  src: url("Mosk Bold 700.ttf") format("opentype");
+		}
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+			box-sizing: border-box;
+			font-family: "Rubik",  sans-serif;
+		}
+		#main-container{
+			 width:100%;
+			 height: 100vh;			 
+			 position: relative;
+
+		}
+		#div-image{
+			width:100%;
+			height: 100vh;
+			position: absolute;
+			z-index: 1;
+			background-image: url("working.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#div-fade{
+			width:100%;
+			height: 100vh;
+			position: absolute;
+			background-color: #252934;
+			z-index: 2;
+			opacity: 0.88;
+		}
+		#div-content{
+			width:100%;
+			height: 100%;
+			position: absolute;
+			z-index: 3;
+			padding: 10% 5%;
+			opacity: 1;
+		}
+		#heading{
+			font-size: 3.5rem;
+			color: #fff;
+			text-align: center;
+		}
+		#heading span {
+			color: #DF5D4A;
+		}
+		#sub-heading{
+			font-size: 1.6rem;
+			color: #fff;
+			text-align: center;
+			/*border-bottom: 1px solid #fff;*/
+			padding-top: 25px;
+		}
+		#mail-id{
+			font-size: 1.3rem;
+			text-align: center;
+			color:#fff;
+			padding-top: 70px;
+			margin-bottom: 2.5%;
+
+		}
+		#mail-id span{
+			font-size: 1.3rem;
+			margin-right: 5px;
+		}
+		#mobile{
+			margin-left: 40px;
+		}
+
+		#count-down{
+			/*border-top:3px solid #fff;*/
+			width:60%;
+			margin : auto;
+		}
+		#count-down-heading{
+			color:#fff;
+			text-align: center;
+			letter-spacing: 0.9px;
+			margin: 12.5% 0 3% 0;
+		}
+		#count-down div{
+			width:20%;
+			text-align: center;
+			/*border:1px solid white;*/
+			float: left;
+			color:#fff;
+			margin-left: 4%;
+
+		}
+		#count-down div span {
+			font-size: 3.5rem;
+
+		}
+		.smalltext {
+			font-size: 1.3rem;
+			background-color: #DF5D4A;
+			border-radius: 1000px;
+			color: #fff;
+			margin-top:22px;
+			padding: 2% 0 3% 0;
+		}
+		
+		#contact-me-form{
+			width:50%;
+			height: 100%;
+			position: fixed;
+			/*border:1px solid black;*/
+			z-index: 10;
+			
+			right:-50%;
+			background-color: #DF5D4A;
+			transition: all 0.4s;
+		}
+		#contact-me-form-heading{
+			color:#fff;
+			font-size: 3.5rem;
+			margin-left: 10%;
+			padding: 12% 0 5% 0;
+		}
+		#contact-tag{
+			position: absolute;
+			width:20%;
+			left:-20%;
+			top:15%;
+			text-align: center;
+			padding:1.5% 0;
+			cursor: pointer;
+			background-color: #DF5D4A;
+			color:#fff;
+			z-index:8;
+			transition: all 0.4s;
+		}
+		#close-tag{
+			position: absolute;
+			width:10%;
+			left:-10%;
+			top:15%;
+			text-align: center;
+			padding:0.1% 0;
+			cursor: pointer;
+			font-size: 30px;
+			background-color: #DF5D4A;
+			color:#fff;
+			transition: all 0.4s;
+
+		}
+		#contact-me-form input{
+			width:80%;
+			height: 50px;
+			margin-left:10%;
+			margin-bottom: 20px;
+			padding: 20px;
+		}
+		#contact-me-form input:focus{
+			outline: none;
+		}
+		#contact-me-form textarea:focus{
+			outline: none;
+		}
+		#contact-me-form textarea{
+			width:80%;
+			height:150px;
+			margin-left: 10%;
+			margin-bottom: 20px;
+			padding: 20px;
+
+		} 
+		#sendMessage{
+			margin-top: 20px;
+			background-color: #252934;
+			color: #fff;
+			/*font-size: 20px;*/
+			height: 0px;
+			padding: 20px 0 20px 0;
+		}
+		#status{
+			margin-left: 10%;
+			color: #fff;
+			padding-right: 10%;
+		}
+		#landscape-view{
+			display: none;
+		}
+		
+		/* Mobile devices style start from here */
+		/* Mobile devices style start from here */
+
+		@media (max-width: 564px) {
+			#div-content{
+			padding: 25% 5%;
+		}
+			#heading{
+				font-size: 2.5rem
+			}
+			#sub-heading{
+				font-size: 1.4rem;
+				padding-top: 30px
+			}
+			#mail-id{
+			font-size: 0.8rem;
+			
+
+		}
+		#mail-id span{
+			font-size: 0.8rem;
+			
+		}
+		#count-down{
+			/*border-top:3px solid #fff;*/
+			width:100%;
+		}
+		#count-down-heading{
+			margin: 12.5% 0 8% 0;
+		}
+		#count-down div{
+			width:20%;
+			margin-left: 4%;
+
+		}
+		#count-down div span {
+			font-size: 1.3rem;
+
+		}
+		.smalltext {
+			font-size: 0.7rem;
+			margin-top:12px;
+			padding: 4% 0 5% 0;
+		}
+
+
+		#contact-me-form{
+			width:100%;
+			right:-100%;
+			background-color: #DF5D4A;
+			transition: all 0.4s;
+		}
+		#contact-me-form-heading{
+			color:#fff;
+			font-size: 2.5rem;
+			margin-left: 10%;
+			padding: 10% 0 8% 0;
+		}
+		#contact-tag{
+			position: absolute;
+			width:40%;
+			left:-40%;
+			top:3%;
+			text-align: center;
+			padding:1.5% 0;
+			cursor: pointer;
+			background-color: #DF5D4A;
+			color:#fff;
+			z-index:8;
+			transition: all 0.4s;
+		}
+		#close-tag{
+			position: absolute;
+			width:10%;
+			left:80%;
+			top:1%;
+			text-align: center;
+			padding:0.1% 0;
+			cursor: pointer;
+			font-size: 30px;
+			background-color: #DF5D4A;
+			color:#fff;
+			transition: all 0.4s;
+			
+		}
+		#contact-me-form input{
+			width:80%;
+			height: 50px;
+			margin-left:10%;
+			margin-bottom: 20px;
+			padding: 20px;
+		}
+		#contact-me-form textarea{
+			width:80%;
+			height:150px;
+			margin-left: 10%;
+			margin-bottom: 20px;
+			padding: 10px;
+
+		} 
+		#sendMessage{
+			margin-top: 20px;
+			background-color: #252934;
+			color: #fff;
+			/*font-size: 20px;*/
+			height: 0px;
+			padding: 00px 0 20px 0;
+		}
+		#status{
+			font-size: 12px;
+		}
+		#landscape-view{
+			display: none;
+		}
+
+		}
+		@media (orientation : landscape) and (max-width: 764px){
+			#main-container{
+				display: none;
+			}
+			#landscape-view{
+				color:white;
+				height: 100vh;
+				background-color: #252934;
+				text-align: center;
+				font-size: 1.2rem;
+				padding: 12% 7%;
+				display: block;
+			}
+			#landscape-view img{
+				margin-bottom: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="main-container">
+		<div id="div-image"></div>
+		<div id="div-fade"></div>
+		<div id="div-content">
+			<div id="heading">Website is under <span>maintenance</span></div>
+			<div id="sub-heading">Sorry for the inconvenience caused</div>
+			<!-- <div id="mail-id"><span>✉</span> bhuvansingh206@gmail.com<span id="mobile">☎</span> 8860027932</div> -->
+			<div id="count-down">
+				<h1 id="count-down-heading">-- Will be back in --  </h1>
+				<div>
+					<span id="days">2</span>
+					<p class="smalltext">Days</p>
+				</div>
+				<div>
+					<span id="hours">15</span>
+					<p class="smalltext">Hours</p>
+				</div>
+				<div>
+					<span id="minutes">54</span>
+					<p class="smalltext">Minutes</p>
+				</div>
+				<div>
+					<span id="seconds">35</span>
+					<p class="smalltext">Seconds</p>
+				</div>
+			</div>
+
+		</div>
+	<div id="contact-me-form">
+		<div id="contact-tag">✉ Contact Me</div>
+		<div id="close-tag">➔</div>
+
+		<div id="contact-me-form-heading">Get In Touch.</div>
+		<form name="mailer" id="mailer" onsubmit="mailerFunction(); return false;" method="post">
+			<input type="text" name="senderName" id="senderName" placeholder="Your Name">
+			<input type="email" name="senderEmail" id="senderEmail" placeholder="Your Email">
+			<textarea name="senderMessage" id="senderMessage" placeholder="Your Messsage"></textarea>
+			<input type="submit" name="sendMessage" id="sendMessage" value="Send">
+			<div id="status"></div>
+		</form>
+	</div>
+		
+	</div>
+	<div id="landscape-view">
+		<img src="smartphone.png" alt="switch-back-to-portrait" height="100px">
+		<br>
+		Landscape view is not supported. Please switch back to the portrait view.
+	
+		Sorry for the incovinience.
+	</div>
+	
+	
+	<script>
+		// Count Down Date when the site will be live
+		var countDownDate = new Date("Feb 26, 2017 12:00:00").getTime();
+
+		// updating the count down timer every second
+		var x = setInterval(function(){
+
+			// getting the current time and date
+			var dateNow = new Date().getTime();
+
+			// calculating the time remaining 
+			var distance  = countDownDate - dateNow;
+
+			//calculating days,hours,minutes,seconds remaining  
+
+			var days = Math.floor(distance/(24*60*60*1000));
+			var hours = Math.floor((distance%(24*60*60*1000))/(60*60*1000));
+			var minutes = Math.floor((distance%(60*60*1000))/(60*1000));
+			var seconds = Math.floor((distance%(60*1000))/1000);
+
+			// assigning values 
+			var dayss = document.getElementById("days");
+			var hourss = document.getElementById("hours");
+			var minutess = document.getElementById("minutes");
+			var secondss = document.getElementById("seconds");
+
+			dayss.innerHTML = days;
+			hourss.innerHTML = hours;
+			minutess.innerHTML = minutes;
+			secondss.innerHTML =seconds;
+
+			if(distance<=0){
+			clearInterval(x);
+			dayss.innerHTML = 0;
+			hourss.innerHTML = 0;
+			minutess.innerHTML = 0;
+			secondss.innerHTML =0;
+			}
+
+		},1000)
+
+
+		// click functionalities for contact and close tags.
+		var contactForm  = document.getElementById("contact-me-form");
+		var content  = document.getElementById("div-content");
+		var image  = document.getElementById("div-image");
+		var contactTag = document.getElementById("contact-tag");
+		var closeTag = document.getElementById("close-tag");
+		contactTag.onclick = function(){
+			contactForm.style.right = "0%";
+			content.style.opacity = "0.2";
+			image.style.opacity = "0.2";
+			contactTag.style.display = "none";
+			closeTag.style.display = "block";
+		}
+		closeTag.onclick = function(){
+			if(window.innerWidth<564){
+			contactForm.style.right = "-100%";
+			}
+			else{
+				contactForm.style.right = "-50%";	
+			}
+			content.style.opacity = "1";
+			image.style.opacity = "1";
+			contactTag.style.display = "block";
+			closeTag.style.display = "none";
+		}
+		function _(id) {return(document.getElementById(id))};
+
+		function mailerFunction(){
+			_("sendMessage").disabled = true;
+			_("status").innerHTML = "Sending Data....."
+
+			var form = _("mailer");
+
+			var formdata = new FormData();
+			formdata.append("senderName",_("senderName").value);
+			// alert("working fine till here");
+			formdata.append("senderMail",_("senderEmail").value);
+
+			formdata.append("senderMessage",_("senderMessage").value);
+
+			var ajax  = new XMLHttpRequest();
+
+			ajax.open("POST","mailer.php");
+
+			ajax.onreadystatechange = function(){
+				// alert("working fine till here");
+				if(ajax.readyState == 4 && ajax.status == 200){
+					if(ajax.responseText == "success"){
+						_("status").innerHTML = 'Thankyou '+_("senderName").value+', i have recieved your mail. Will get in touch with you shortly.';
+						form.reset();
+					}
+
+					else{
+						_("status").innerHTML = ajax.responseText;
+						_("sendMessage").disabled= false;
+					}
+				}
+			}
+			ajax.send(formdata);
+		}
+	</script>
+	
+</body>
+</html>
